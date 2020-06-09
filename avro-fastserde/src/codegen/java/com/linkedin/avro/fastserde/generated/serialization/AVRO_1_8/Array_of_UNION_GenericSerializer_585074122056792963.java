@@ -21,17 +21,17 @@ public class Array_of_UNION_GenericSerializer_585074122056792963
             (encoder).setItemCount(0);
         } else {
             (encoder).setItemCount(data.size());
-            for (int counter64 = 0; (counter64 <((List<IndexedRecord> ) data).size()); counter64 ++) {
+            for (int counter69 = 0; (counter69 <((List<IndexedRecord> ) data).size()); counter69 ++) {
                 (encoder).startItem();
-                IndexedRecord union65 = null;
-                union65 = ((List<IndexedRecord> ) data).get(counter64);
-                if (union65 == null) {
+                IndexedRecord union70 = null;
+                union70 = ((List<IndexedRecord> ) data).get(counter69);
+                if (union70 == null) {
                     (encoder).writeIndex(0);
                     (encoder).writeNull();
                 } else {
-                    if ((union65 instanceof IndexedRecord)&&"com.adpilot.utils.generated.avro.record".equals(((IndexedRecord) union65).getSchema().getFullName())) {
+                    if ((union70 instanceof IndexedRecord)&&"com.adpilot.utils.generated.avro.record".equals(((IndexedRecord) union70).getSchema().getFullName())) {
                         (encoder).writeIndex(1);
-                        serializerecord66(((IndexedRecord) union65), (encoder));
+                        serializerecord71(((IndexedRecord) union70), (encoder));
                     }
                 }
             }
@@ -40,20 +40,20 @@ public class Array_of_UNION_GenericSerializer_585074122056792963
     }
 
     @SuppressWarnings("unchecked")
-    public void serializerecord66(IndexedRecord data, Encoder encoder)
+    public void serializerecord71(IndexedRecord data, Encoder encoder)
         throws IOException
     {
-        CharSequence field67 = ((CharSequence) data.get(0));
-        if (field67 == null) {
+        CharSequence field72 = ((CharSequence) data.get(0));
+        if (field72 == null) {
             (encoder).writeIndex(0);
             (encoder).writeNull();
         } else {
-            if (field67 instanceof CharSequence) {
+            if (field72 instanceof CharSequence) {
                 (encoder).writeIndex(1);
-                if (field67 instanceof Utf8) {
-                    (encoder).writeString(((Utf8) field67));
+                if (field72 instanceof Utf8) {
+                    (encoder).writeString(((Utf8) field72));
                 } else {
-                    (encoder).writeString(field67 .toString());
+                    (encoder).writeString(field72 .toString());
                 }
             }
         }

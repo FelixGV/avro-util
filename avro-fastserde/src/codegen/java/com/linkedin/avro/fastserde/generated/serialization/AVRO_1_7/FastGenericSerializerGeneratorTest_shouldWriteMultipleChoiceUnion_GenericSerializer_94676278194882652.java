@@ -15,33 +15,33 @@ public class FastGenericSerializerGeneratorTest_shouldWriteMultipleChoiceUnion_G
     public void serialize(IndexedRecord data, Encoder encoder)
         throws IOException
     {
-        serializeFastGenericSerializerGeneratorTest_shouldWriteMultipleChoiceUnion98(data, (encoder));
+        serializeFastGenericSerializerGeneratorTest_shouldWriteMultipleChoiceUnion103(data, (encoder));
     }
 
     @SuppressWarnings("unchecked")
-    public void serializeFastGenericSerializerGeneratorTest_shouldWriteMultipleChoiceUnion98(IndexedRecord data, Encoder encoder)
+    public void serializeFastGenericSerializerGeneratorTest_shouldWriteMultipleChoiceUnion103(IndexedRecord data, Encoder encoder)
         throws IOException
     {
-        Object union99 = ((Object) data.get(0));
-        if (union99 == null) {
+        Object union104 = ((Object) data.get(0));
+        if (union104 == null) {
             (encoder).writeIndex(0);
             (encoder).writeNull();
         } else {
-            if ((union99 instanceof IndexedRecord)&&"com.adpilot.utils.generated.avro.subRecord".equals(((IndexedRecord) union99).getSchema().getFullName())) {
+            if ((union104 instanceof IndexedRecord)&&"com.adpilot.utils.generated.avro.subRecord".equals(((IndexedRecord) union104).getSchema().getFullName())) {
                 (encoder).writeIndex(1);
-                serializesubRecord100(((IndexedRecord) union99), (encoder));
+                serializesubRecord105(((IndexedRecord) union104), (encoder));
             } else {
-                if (union99 instanceof CharSequence) {
+                if (union104 instanceof CharSequence) {
                     (encoder).writeIndex(2);
-                    if (union99 instanceof Utf8) {
-                        (encoder).writeString(((Utf8) union99));
+                    if (union104 instanceof Utf8) {
+                        (encoder).writeString(((Utf8) union104));
                     } else {
-                        (encoder).writeString(union99 .toString());
+                        (encoder).writeString(union104 .toString());
                     }
                 } else {
-                    if (union99 instanceof Integer) {
+                    if (union104 instanceof Integer) {
                         (encoder).writeIndex(3);
-                        (encoder).writeInt(((Integer) union99));
+                        (encoder).writeInt(((Integer) union104));
                     }
                 }
             }
@@ -49,20 +49,20 @@ public class FastGenericSerializerGeneratorTest_shouldWriteMultipleChoiceUnion_G
     }
 
     @SuppressWarnings("unchecked")
-    public void serializesubRecord100(IndexedRecord data, Encoder encoder)
+    public void serializesubRecord105(IndexedRecord data, Encoder encoder)
         throws IOException
     {
-        CharSequence subField101 = ((CharSequence) data.get(0));
-        if (subField101 == null) {
+        CharSequence subField106 = ((CharSequence) data.get(0));
+        if (subField106 == null) {
             (encoder).writeIndex(0);
             (encoder).writeNull();
         } else {
-            if (subField101 instanceof CharSequence) {
+            if (subField106 instanceof CharSequence) {
                 (encoder).writeIndex(1);
-                if (subField101 instanceof Utf8) {
-                    (encoder).writeString(((Utf8) subField101));
+                if (subField106 instanceof Utf8) {
+                    (encoder).writeString(((Utf8) subField106));
                 } else {
-                    (encoder).writeString(subField101 .toString());
+                    (encoder).writeString(subField106 .toString());
                 }
             }
         }

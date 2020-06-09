@@ -21,18 +21,18 @@ public class Map_of_UNION_GenericSerializer_2087096002965517991
             (encoder).setItemCount(0);
         } else {
             (encoder).setItemCount(data.size());
-            for (CharSequence key87 : ((Map<CharSequence, IndexedRecord> ) data).keySet()) {
+            for (CharSequence key92 : ((Map<CharSequence, IndexedRecord> ) data).keySet()) {
                 (encoder).startItem();
-                (encoder).writeString(key87);
-                IndexedRecord union88 = null;
-                union88 = ((Map<CharSequence, IndexedRecord> ) data).get(key87);
-                if (union88 == null) {
+                (encoder).writeString(key92);
+                IndexedRecord union93 = null;
+                union93 = ((Map<CharSequence, IndexedRecord> ) data).get(key92);
+                if (union93 == null) {
                     (encoder).writeIndex(0);
                     (encoder).writeNull();
                 } else {
-                    if ((union88 instanceof IndexedRecord)&&"com.adpilot.utils.generated.avro.record".equals(((IndexedRecord) union88).getSchema().getFullName())) {
+                    if ((union93 instanceof IndexedRecord)&&"com.adpilot.utils.generated.avro.record".equals(((IndexedRecord) union93).getSchema().getFullName())) {
                         (encoder).writeIndex(1);
-                        serializerecord89(((IndexedRecord) union88), (encoder));
+                        serializerecord94(((IndexedRecord) union93), (encoder));
                     }
                 }
             }
@@ -41,20 +41,20 @@ public class Map_of_UNION_GenericSerializer_2087096002965517991
     }
 
     @SuppressWarnings("unchecked")
-    public void serializerecord89(IndexedRecord data, Encoder encoder)
+    public void serializerecord94(IndexedRecord data, Encoder encoder)
         throws IOException
     {
-        CharSequence field90 = ((CharSequence) data.get(0));
-        if (field90 == null) {
+        CharSequence field95 = ((CharSequence) data.get(0));
+        if (field95 == null) {
             (encoder).writeIndex(0);
             (encoder).writeNull();
         } else {
-            if (field90 instanceof CharSequence) {
+            if (field95 instanceof CharSequence) {
                 (encoder).writeIndex(1);
-                if (field90 instanceof Utf8) {
-                    (encoder).writeString(((Utf8) field90));
+                if (field95 instanceof Utf8) {
+                    (encoder).writeString(((Utf8) field95));
                 } else {
-                    (encoder).writeString(field90 .toString());
+                    (encoder).writeString(field95 .toString());
                 }
             }
         }

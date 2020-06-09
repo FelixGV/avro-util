@@ -16,22 +16,22 @@ public class FastGenericSerializerGeneratorTest_shouldWritePrimitives_GenericSer
     public void serialize(IndexedRecord data, Encoder encoder)
         throws IOException
     {
-        serializeFastGenericSerializerGeneratorTest_shouldWritePrimitives102(data, (encoder));
+        serializeFastGenericSerializerGeneratorTest_shouldWritePrimitives107(data, (encoder));
     }
 
     @SuppressWarnings("unchecked")
-    public void serializeFastGenericSerializerGeneratorTest_shouldWritePrimitives102(IndexedRecord data, Encoder encoder)
+    public void serializeFastGenericSerializerGeneratorTest_shouldWritePrimitives107(IndexedRecord data, Encoder encoder)
         throws IOException
     {
         (encoder).writeInt(((Integer) data.get(0)));
-        Integer testIntUnion103 = ((Integer) data.get(1));
-        if (testIntUnion103 == null) {
+        Integer testIntUnion108 = ((Integer) data.get(1));
+        if (testIntUnion108 == null) {
             (encoder).writeIndex(0);
             (encoder).writeNull();
         } else {
-            if (testIntUnion103 instanceof Integer) {
+            if (testIntUnion108 instanceof Integer) {
                 (encoder).writeIndex(1);
-                (encoder).writeInt(((Integer) testIntUnion103));
+                (encoder).writeInt(((Integer) testIntUnion108));
             }
         }
         if (data.get(2) instanceof Utf8) {
@@ -39,73 +39,73 @@ public class FastGenericSerializerGeneratorTest_shouldWritePrimitives_GenericSer
         } else {
             (encoder).writeString(data.get(2).toString());
         }
-        CharSequence testStringUnion104 = ((CharSequence) data.get(3));
-        if (testStringUnion104 == null) {
+        CharSequence testStringUnion109 = ((CharSequence) data.get(3));
+        if (testStringUnion109 == null) {
             (encoder).writeIndex(0);
             (encoder).writeNull();
         } else {
-            if (testStringUnion104 instanceof CharSequence) {
+            if (testStringUnion109 instanceof CharSequence) {
                 (encoder).writeIndex(1);
-                if (testStringUnion104 instanceof Utf8) {
-                    (encoder).writeString(((Utf8) testStringUnion104));
+                if (testStringUnion109 instanceof Utf8) {
+                    (encoder).writeString(((Utf8) testStringUnion109));
                 } else {
-                    (encoder).writeString(testStringUnion104 .toString());
+                    (encoder).writeString(testStringUnion109 .toString());
                 }
             }
         }
         (encoder).writeLong(((Long) data.get(4)));
-        Long testLongUnion105 = ((Long) data.get(5));
-        if (testLongUnion105 == null) {
+        Long testLongUnion110 = ((Long) data.get(5));
+        if (testLongUnion110 == null) {
             (encoder).writeIndex(0);
             (encoder).writeNull();
         } else {
-            if (testLongUnion105 instanceof Long) {
+            if (testLongUnion110 instanceof Long) {
                 (encoder).writeIndex(1);
-                (encoder).writeLong(((Long) testLongUnion105));
+                (encoder).writeLong(((Long) testLongUnion110));
             }
         }
         (encoder).writeDouble(((Double) data.get(6)));
-        Double testDoubleUnion106 = ((Double) data.get(7));
-        if (testDoubleUnion106 == null) {
+        Double testDoubleUnion111 = ((Double) data.get(7));
+        if (testDoubleUnion111 == null) {
             (encoder).writeIndex(0);
             (encoder).writeNull();
         } else {
-            if (testDoubleUnion106 instanceof Double) {
+            if (testDoubleUnion111 instanceof Double) {
                 (encoder).writeIndex(1);
-                (encoder).writeDouble(((Double) testDoubleUnion106));
+                (encoder).writeDouble(((Double) testDoubleUnion111));
             }
         }
         (encoder).writeFloat(((Float) data.get(8)));
-        Float testFloatUnion107 = ((Float) data.get(9));
-        if (testFloatUnion107 == null) {
+        Float testFloatUnion112 = ((Float) data.get(9));
+        if (testFloatUnion112 == null) {
             (encoder).writeIndex(0);
             (encoder).writeNull();
         } else {
-            if (testFloatUnion107 instanceof Float) {
+            if (testFloatUnion112 instanceof Float) {
                 (encoder).writeIndex(1);
-                (encoder).writeFloat(((Float) testFloatUnion107));
+                (encoder).writeFloat(((Float) testFloatUnion112));
             }
         }
         (encoder).writeBoolean(((Boolean) data.get(10)));
-        Boolean testBooleanUnion108 = ((Boolean) data.get(11));
-        if (testBooleanUnion108 == null) {
+        Boolean testBooleanUnion113 = ((Boolean) data.get(11));
+        if (testBooleanUnion113 == null) {
             (encoder).writeIndex(0);
             (encoder).writeNull();
         } else {
-            if (testBooleanUnion108 instanceof Boolean) {
+            if (testBooleanUnion113 instanceof Boolean) {
                 (encoder).writeIndex(1);
-                (encoder).writeBoolean(((Boolean) testBooleanUnion108));
+                (encoder).writeBoolean(((Boolean) testBooleanUnion113));
             }
         }
         (encoder).writeBytes(((ByteBuffer) data.get(12)));
-        ByteBuffer testBytesUnion109 = ((ByteBuffer) data.get(13));
-        if (testBytesUnion109 == null) {
+        ByteBuffer testBytesUnion114 = ((ByteBuffer) data.get(13));
+        if (testBytesUnion114 == null) {
             (encoder).writeIndex(0);
             (encoder).writeNull();
         } else {
-            if (testBytesUnion109 instanceof ByteBuffer) {
+            if (testBytesUnion114 instanceof ByteBuffer) {
                 (encoder).writeIndex(1);
-                (encoder).writeBytes(((ByteBuffer) testBytesUnion109));
+                (encoder).writeBytes(((ByteBuffer) testBytesUnion114));
             }
         }
     }
